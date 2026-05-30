@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useContext } from "react";
+import { userDataContext } from "./Context/UserContext";
 
 const App = () => {
-  return (
-    <div>App</div>
-  )
-}
+  const data = useContext(userDataContext);
+  return <div>Hello {data}</div>;
+};
 
-export default App
+export default App;

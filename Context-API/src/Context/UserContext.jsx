@@ -2,8 +2,12 @@ import React, { createContext } from "react";
 
 export const userDataContext = createContext();
 
+const user = "Nayan";
+
 const UserContext = ({ children }) => {
-  return <div>{children}</div>;
+  return (
+    <userDataContext.Provider value={user}>{children}</userDataContext.Provider>
+  );
 };
 
 export default UserContext;
